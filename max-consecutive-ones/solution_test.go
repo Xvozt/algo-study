@@ -1,4 +1,4 @@
-package remove_duplicates_sorted_array
+package max_consecutive_ones
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_remove_duplications(t *testing.T) {
+func Test_count_max_consecutive_ones(t *testing.T) {
 	tests := []struct {
 		name   string
 		nums   []int
@@ -14,18 +14,18 @@ func Test_remove_duplications(t *testing.T) {
 	}{
 		{
 			name:   "test 1",
-			nums:   []int{1, 1, 2},
-			result: 2,
+			nums:   []int{1, 1, 0, 1, 1, 1},
+			result: 3,
 		},
 		{
 			name:   "test 2",
-			nums:   []int{1, 1, 2, 3, 4, 4, 5},
-			result: 5,
+			nums:   []int{0, 0, 0, 0, 0},
+			result: 0,
 		},
 		{
 			name:   "test 3",
-			nums:   []int{1, 2, 3, 4, 5},
-			result: 5,
+			nums:   []int{1, 1, 1, 0, 1, 1},
+			result: 3,
 		},
 		{
 			name:   "test 4",
@@ -41,8 +41,7 @@ func Test_remove_duplications(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := removeDuplicates(tt.nums)
-
+			got := countMaxConsecutiveOnes(tt.nums)
 			assert.Equal(t, tt.result, got)
 		})
 	}
