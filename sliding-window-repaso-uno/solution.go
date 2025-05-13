@@ -10,26 +10,6 @@ Output: 6
 Можно перевернуть два нуля — [1,1,1,0,0,1,1,1,1,1,1] → шесть подряд
 */
 
-// func maxConsecutiveOnesIII(nums []int, k int) int {
-// 	zeroes, currentCount, maxCount := 0, 0, 0
-
-// 	for i := range nums {
-// 		if nums[i] == 1 && zeroes <= k {
-// 			currentCount++
-// 			maxCount = max(maxCount, currentCount)
-// 		} else if zeroes < k {
-// 			zeroes++
-// 			currentCount++
-// 			maxCount = max(maxCount, currentCount)
-// 		} else {
-// 			currentCount = 0
-// 			zeroes = 0
-// 		}
-// 	}
-
-// 	return maxCount
-// }
-
 func maxConsecutiveOnesIII(nums []int, k int) int {
 
 	start, zeroes, maxLength := 0, 0, 0
