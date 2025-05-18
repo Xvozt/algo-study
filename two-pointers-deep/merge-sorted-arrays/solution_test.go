@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_reverse_string(t *testing.T) {
+func Test_merge_sorted_arrays(t *testing.T) {
 	tests := []struct {
 		name   string
 		nums1  []int

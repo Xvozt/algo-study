@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_reverse_string(t *testing.T) {
+func Test_remove_duplicates_ii(t *testing.T) {
 	tests := []struct {
 		name   string
 		nums   []int
